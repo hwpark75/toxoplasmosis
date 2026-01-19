@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToxoGuard - Advanced Solutions for Toxoplasmosis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
+        }
+        .image-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(79, 70, 229, 0.2) 100%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold gradient-text hover:opacity-80 transition-opacity">ToxoGuard</a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
+                    <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#research" class="text-gray-600 hover:text-blue-600 transition-colors">Research</a>
+                    <a href="#patents" class="text-gray-600 hover:text-blue-600 transition-colors">Patents</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center hero-gradient">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 mix-blend-multiply"></div>
+            <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660" alt="Laboratory Background" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                        Advanced Solutions for 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Toxoplasmosis</span>
+                    </h1>
+                    <p class="text-xl text-gray-100 max-w-2xl mb-8 leading-relaxed">
+                        Pioneering veterinary vaccines, diagnostic kits, and comprehensive testing services for both human and animal health.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl">
+                            Get Started
+                        </a>
+                        <a href="#solutions" class="px-8 py-4 bg-white/10 backdrop-blur-md text-white rounded-lg hover:bg-white/20 transition-all border border-white/20">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074" alt="Research Visual" class="rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="relative -mt-24 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                    <div class="text-gray-600">Years of Research</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">50k+</div>
+                    <div class="text-gray-600">Tests Conducted</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                    <div class="text-gray-600">Research Partners</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">25+</div>
+                    <div class="text-gray-600">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About ToxoGuard</h2>
+                    <p class="text-lg text-gray-600 mb-8">ToxoGuard is a leading biotechnology company dedicated to revolutionizing the prevention, diagnosis, and treatment of toxoplasmosis. With over 15 years of research experience and a team of world-class scientists, we are committed to developing innovative solutions that improve both human and animal health.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-900">Our Mission</h3>
+                                <p class="mt-2 text-gray-600">To provide cutting-edge solutions for toxoplasmosis management through continuous innovation and research excellence.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-900">Our Vision</h3>
+                                <p class="mt-2 text-gray-600">To become the global leader in toxoplasmosis prevention and control, setting new standards in veterinary and human healthcare.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <a href="about-details.html" class="inline-block">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Laboratory Research" class="rounded-xl shadow-2xl hover:opacity-90 transition-opacity">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Section -->
+    <div id="research" class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest Research</h2>
+                <p class="text-xl text-gray-600">Advancing the field through innovative research and development</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="group">
+                    <a href="vaccine-development.html" class="block">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <div class="image-gradient"></div>
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557" alt="Research Image 1" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Novel Vaccine Development</h3>
+                        <p class="text-gray-600">Exploring new approaches to vaccine development using advanced biotechnology.</p>
+                    </a>
+                </div>
+                <div class="group">
+                    <a href="diagnostic-innovation.html" class="block">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <div class="image-gradient"></div>
+                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120" alt="Research Image 2" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Diagnostic Innovation</h3>
+                        <p class="text-gray-600">Developing rapid and accurate diagnostic tools for early detection.</p>
+                    </a>
+                </div>
+                <div class="group">
+                    <a href="treatment-studies.html" class="block">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <div class="image-gradient"></div>
+                            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e" alt="Research Image 3" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Treatment Studies</h3>
+                        <p class="text-gray-600">Conducting clinical trials for innovative treatment methods.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div id="solutions" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Our Comprehensive Solutions</h2>
+                <p class="mt-4 text-xl text-gray-600">Innovative approaches to toxoplasmosis prevention and diagnosis</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="veterinary-vaccines.html" class="bg-gray-50 p-8 rounded-xl hover:bg-blue-50 transition-colors">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016" alt="Veterinary Vaccines" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Veterinary Vaccines</h3>
+                    <p class="text-gray-600">Advanced vaccines designed specifically for animal health, providing effective protection against toxoplasmosis.</p>
+                </a>
+                <a href="diagnostic-kits.html" class="bg-gray-50 p-8 rounded-xl hover:bg-blue-50 transition-colors">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118" alt="Diagnostic Kits" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Diagnostic Kits</h3>
+                    <p class="text-gray-600">State-of-the-art diagnostic kits for both human and veterinary use, ensuring accurate and rapid detection.</p>
+                </a>
+                <a href="testing-services.html" class="bg-gray-50 p-8 rounded-xl hover:bg-blue-50 transition-colors">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660" alt="Testing Services" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Testing Services</h3>
+                    <p class="text-gray-600">Comprehensive diagnostic services with expert analysis and detailed reporting for both clinical and research applications.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Products</h2>
+                <p class="text-xl text-gray-600">Innovative solutions for toxoplasmosis management</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <a href="toxovax.html" class="bg-blue-50 hover:bg-blue-100 transition-colors p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">VaxiTox™</h3>
+                    <p class="text-gray-600 mb-6">Our flagship veterinary vaccine providing robust protection against toxoplasmosis in animals.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Proven efficacy in multiple animal species
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Long-lasting immunity
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Minimal side effects
+                        </li>
+                    </ul>
+                </a>
+                <a href="toxotest.html" class="bg-indigo-50 hover:bg-indigo-100 transition-colors p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">NeoToxoDx™</h3>
+                    <p class="text-gray-600 mb-6">Advanced diagnostic kits for rapid and accurate detection of toxoplasmosis.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            High sensitivity and specificity
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Easy-to-use format
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Rapid results
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Diagnostic Services</h2>
+                <p class="mt-4 text-xl text-gray-600">Comprehensive testing and analysis services</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <a href="clinical-testing.html" class="bg-purple-50 hover:bg-purple-100 transition-colors p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Clinical Testing</h3>
+                    <p class="text-gray-600 mb-6">Our state-of-the-art laboratory provides comprehensive testing services for both human and animal samples.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Routine Screening</p>
+                                <p class="text-sm text-gray-500">Regular health monitoring</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Confirmatory Testing</p>
+                                <p class="text-sm text-gray-500">Detailed analysis and verification</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="research-support.html" class="bg-violet-50 hover:bg-violet-100 transition-colors p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Research Support</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive support for research institutions and pharmaceutical companies.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-8 w-8 rounded-full bg-violet-100 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Custom Assay Development</p>
+                                <p class="text-sm text-gray-500">Tailored solutions for research needs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="h-8 w-8 rounded-full bg-violet-100 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Technical Consultation</p>
+                                <p class="text-sm text-gray-500">Expert guidance and support</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patents Section -->
+    <div id="patents" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Our Patents</h2>
+                <p class="mt-4 text-xl text-gray-600">Innovative technologies protected by international patents</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="patents.html#vaccine" class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <div class="image-gradient"></div>
+                        <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8" alt="Vaccine Patent" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Vaccine Technology</h3>
+                    <p class="text-gray-600">Novel vaccine formulation and delivery methods for enhanced immunity.</p>
+                </a>
+                <a href="patents.html#diagnostic" class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <div class="image-gradient"></div>
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67" alt="Diagnostic Patent" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Diagnostic Methods</h3>
+                    <p class="text-gray-600">Advanced detection techniques for rapid and accurate diagnosis.</p>
+                </a>
+                <a href="patents.html#treatment" class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <div class="image-gradient"></div>
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831" alt="Treatment Patent" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Treatment Solutions</h3>
+                    <p class="text-gray-600">Innovative therapeutic approaches for effective treatment.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Contact Us</h2>
+                <p class="mt-4 text-xl text-gray-600">Get in touch with our team for more information</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <form action="https://formsubmit.co/hwpark75@gmail.com" method="POST" class="space-y-6">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Success Page -->
+                    <input type="hidden" name="_next" value="https://toxoguard.com/thank-you.html">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <input type="text" name="subject" id="subject" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-xl font-bold gradient-text">ToxoGuard</span>
+                    <p class="mt-4 text-gray-600">Advanced solutions for toxoplasmosis prevention and diagnosis.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Products</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">ToxoVax™</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">ToxoTest™</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Services</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Clinical Testing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Research Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Contact</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li class="text-gray-600">123 Research Park Drive</li>
+                        <li class="text-gray-600">Science City, SC 12345</li>
+                        <li class="text-gray-600">info@toxoguard.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8">
+                <p class="text-gray-500 text-sm text-center">© 2024 ToxoGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
