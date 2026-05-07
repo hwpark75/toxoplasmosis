@@ -457,14 +457,21 @@
         .video-embed {
             position: relative;
             width: 100%;
-            height: 500px;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(28,188,212,0.2);
         }
 
         .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 24px;
+            border-radius: 16px;
         }
 
         /* Timeline Section - Modern Flow Design */
@@ -873,8 +880,8 @@
                 <div class="video-container fade-in float-animation">
                     <div class="video-embed">
                         <iframe 
-                            src="https://www.youtube.com/embed/videoseries?list=UU5cVtdh7Qgx4W9wH_3-b-3A" 
-                            title="Health Park Technology Overview"
+                            src="https://www.youtube.com/embed/w0iAGBaqyd4?rel=0&modestbranding=1" 
+                            title="Health Park HP-VLP Platform Technology"
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
@@ -889,15 +896,13 @@
     <section class="video-section">
         <div class="container">
             <h2 class="section-title">Meet Our Founder & CEO</h2>
-            <p style="font-size: 1.1rem; color: var(--medium-gray); max-width: 700px; margin: 0 auto 2.5rem;">
-                Hear directly from <strong>Dr. Hyunwoo Park</strong>, Founder &amp; CEO of Health Park,
-                about our breakthrough VLP platform technology and vision to free humanity from infectious diseases.
+            <p style="font-size: 1.1rem; color: var(--medium-gray); max-width: 700px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.9;">
+                Hear directly from <strong>Dr. Hyunwoo Park</strong>, Founder &amp; CEO of Health Park, about our breakthrough VLP platform technology and vision to free humanity from infectious<br>diseases.
             </p>
 
             <div class="video-container fade-in" style="max-width: 900px; margin: 0 auto;">
-                <div class="video-embed" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 20px 60px rgba(28,188,212,0.2);">
+                <div class="video-embed">
                     <iframe
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
                         src="https://www.youtube.com/embed/kTtUijlu5hU?cc_load_policy=1&cc_lang_pref=en&rel=0&modestbranding=1"
                         title="Health Park - Dr. Hyunwoo Park, Founder & CEO | VLP Platform Technology"
                         frameborder="0"
