@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Park — Choose Language / 언어 선택</title>
+<meta name="description" content="Health Park Co., Ltd. — Revolutionary VLP Platform Technology">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#1CBCD4;
+    --blue:#0EA5E9;
+    --indigo:#6366F1;
+    --ink:#0F172A;
+    --mist:#64748B;
+    --paper:#F8FAFC;
+    --line:#E2E8F0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:
+      radial-gradient(ellipse at 15% 15%, rgba(28,188,212,0.10) 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 85%, rgba(99,102,241,0.10) 0%, transparent 45%),
+      linear-gradient(180deg,#ffffff 0%, #f8fdfe 100%);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* faint particle network backdrop */
+  .backdrop{
+    position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.5;
+  }
+
+  .wrap{
+    position:relative; z-index:1;
+    width:100%; max-width:1040px;
+    padding:6vh 24px;
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center;
+  }
+
+  .logo{
+    font-size:1.5rem; font-weight:800; letter-spacing:-0.02em;
+    color:var(--teal);
+    margin-bottom:2.4rem;
+    opacity:0; animation: rise 0.7s ease forwards;
+  }
+  .logo span{
+    background:linear-gradient(135deg,#0EA5E9 0%, #6366F1 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+
+  .eyebrow{
+    font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--teal);
+    background:rgba(28,188,212,0.08);
+    border:1px solid rgba(28,188,212,0.25);
+    border-radius:30px;
+    padding:0.4rem 1.1rem;
+    margin-bottom:1.6rem;
+    opacity:0; animation: rise 0.7s ease 0.1s forwards;
+  }
+
+  h1{
+    font-size:clamp(2rem, 4.4vw, 3.1rem);
+    font-weight:800;
+    line-height:1.18;
+    letter-spacing:-0.02em;
+    margin-bottom:1.1rem;
+    opacity:0; animation: rise 0.7s ease 0.2s forwards;
+  }
+  h1 .accent{
+    background:linear-gradient(135deg,#1CBCD4 0%, #0EA5E9 35%, #6366F1 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+
+  .sub{
+    color:var(--mist);
+    font-size:1.02rem;
+    max-width:560px;
+    line-height:1.7;
+    margin-bottom:3.4rem;
+    opacity:0; animation: rise 0.7s ease 0.3s forwards;
+  }
+
+  /* signature element: VLP particle splitting into EN / KO */
+  .choice-stage{
+    position:relative;
+    width:100%;
+    max-width:760px;
+    margin-bottom:1rem;
+    opacity:0; animation: rise 0.8s ease 0.4s forwards;
+  }
+  .choice-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.6rem;
+    position:relative;
+  }
+  .choice-grid::before{
+    /* connecting line between the two cards, like a strand splitting */
+    content:'';
+    position:absolute;
+    top:-34px; left:50%;
+    width:2px; height:34px;
+    background:linear-gradient(180deg, rgba(28,188,212,0.5), transparent);
+    transform:translateX(-50%);
+  }
+
+  .core{
+    width:14px;height:14px;border-radius:50%;
+    background:linear-gradient(135deg,#1CBCD4,#6366F1);
+    margin:0 auto 34px;
+    position:relative;
+    box-shadow:0 0 0 6px rgba(28,188,212,0.12), 0 0 0 14px rgba(28,188,212,0.06);
+  }
+
+  .lang-card{
+    position:relative;
+    display:flex; flex-direction:column; align-items:center;
+    gap:0.6rem;
+    text-decoration:none;
+    color:var(--ink);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:2.6rem 1.6rem 2.2rem;
+    transition:transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s, border-color 0.35s;
+    overflow:hidden;
+  }
+  .lang-card::before{
+    content:'';
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(28,188,212,0.08), transparent 60%);
+    opacity:0; transition:opacity 0.35s;
+  }
+  .lang-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(28,188,212,0.4);
+    box-shadow:0 20px 48px rgba(28,188,212,0.16);
+  }
+  .lang-card:hover::before{opacity:1;}
+  .lang-card:focus-visible{
+    outline:3px solid var(--teal);
+    outline-offset:3px;
+  }
+
+  .flag-glyph{
+    width:52px;height:52px;border-radius:16px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem; font-weight:800;
+    color:#fff;
+    margin-bottom:0.4rem;
+  }
+  .flag-glyph.en{background:linear-gradient(135deg,#1CBCD4,#0369A1);}
+  .flag-glyph.ko{background:linear-gradient(135deg,#6366F1,#4F46E5);}
+
+  .lang-name{font-size:1.25rem; font-weight:800; letter-spacing:-0.01em;}
+  .lang-desc{font-size:0.85rem; color:var(--mist); line-height:1.5;}
+
+  .lang-cta{
+    margin-top:0.8rem;
+    font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--teal);
+    display:flex; align-items:center; gap:0.35rem;
+  }
+  .lang-cta svg{transition:transform 0.3s;}
+  .lang-card:hover .lang-cta svg{transform:translateX(4px);}
+
+  .footnote{
+    margin-top:3rem;
+    font-size:0.78rem;
+    color:#94A3B8;
+    opacity:0; animation: rise 0.7s ease 0.55s forwards;
+  }
+
+  @keyframes rise{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  @media (max-width:640px){
+    .choice-grid{grid-template-columns:1fr; gap:1.1rem;}
+    .choice-grid::before{display:none;}
+    .core{margin-bottom:20px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+    .logo,.eyebrow,h1,.sub,.choice-stage,.footnote{opacity:1;}
+  }
+</style>
+</head>
+<body>
+
+  <svg class="backdrop" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.10">
+      <circle cx="160" cy="160" r="40" fill="none" stroke="#1CBCD4" stroke-width="2"/>
+      <circle cx="160" cy="160" r="8" fill="#1CBCD4"/>
+      <circle cx="195" cy="160" r="4" fill="#1CBCD4"/>
+      <circle cx="125" cy="160" r="4" fill="#1CBCD4"/>
+      <circle cx="160" cy="125" r="4" fill="#1CBCD4"/>
+      <circle cx="160" cy="195" r="4" fill="#1CBCD4"/>
+
+      <circle cx="1250" cy="740" r="50" fill="none" stroke="#6366F1" stroke-width="2"/>
+      <circle cx="1250" cy="740" r="9" fill="#6366F1"/>
+      <circle cx="1295" cy="740" r="5" fill="#6366F1"/>
+      <circle cx="1205" cy="740" r="5" fill="#6366F1"/>
+      <circle cx="1250" cy="695" r="5" fill="#6366F1"/>
+      <circle cx="1250" cy="785" r="5" fill="#6366F1"/>
+
+      <path d="M1300,40 Q1330,80 1300,120 Q1270,160 1300,200 Q1330,240 1300,280" fill="none" stroke="#1CBCD4" stroke-width="2"/>
+      <path d="M1320,40 Q1350,80 1320,120 Q1290,160 1320,200 Q1350,240 1320,280" fill="none" stroke="#6366F1" stroke-width="2"/>
+
+      <circle cx="80" cy="700" r="20" fill="none" stroke="#1CBCD4" stroke-width="1.5"/>
+      <circle cx="80" cy="700" r="4" fill="#1CBCD4"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="logo">health <span>Park</span></div>
+
+    <div class="eyebrow">Health Park Co., Ltd.</div>
+
+    <h1>Choose your language<br><span class="accent">언어를 선택해주세요</span></h1>
+
+    <p class="sub">
+      Revolutionary VLP platform technology for toxoplasmosis diagnostics and vaccines.<br>
+      톡소플라즈마증 진단키트 및 백신을 위한 혁신적인 VLP 플랫폼 기술입니다.
+    </p>
+
+    <div class="choice-stage">
+      <div class="core"></div>
+      <div class="choice-grid">
+
+        <a class="lang-card" href="en/index.html">
+          <div class="flag-glyph en">EN</div>
+          <div class="lang-name">English</div>
+          <div class="lang-desc">View the site in English</div>
+          <div class="lang-cta">
+            Enter site
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </a>
+
+        <a class="lang-card" href="ko/index.html">
+          <div class="flag-glyph ko">한</div>
+          <div class="lang-name">한국어</div>
+          <div class="lang-desc">한국어로 사이트 보기</div>
+          <div class="lang-cta">
+            입장하기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="footnote">&copy; 2026 Health Park Co., Ltd. — Revolutionary VLP Platform Technology</div>
+  </div>
+
+</body>
+</html>
